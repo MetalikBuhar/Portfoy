@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portföy</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">ANASAYFA</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">HAKKIMDA</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">BECERİLERİM</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Önizleme bölümü -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">MEHMET KAYRA YOLCU</h1>
+        <p class="home__subtitle">WEB SİTE YAPIMCISI, PYTHON PROGRAMCISI</p>
+      </section>
+      <!-- Hakkımda bölümü -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">BENİM HAKKIMDA</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Ben bir insanım. Soru çözerim, okula giderim, oyun oynarım ve tabiki de kod yazarım.
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/WhatsApp Image 2024-07-18 at 18.11.31.jpeg"
+            alt="me"
+            width="400"
+            height="400"
+          />
+        </div>
+      </section>
+      <!-- Beceriler bölümü -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">BECERİLERİM</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Beceri bilgisi</span>
+              <input class="skill__button" type="submit" name="button_python" value="PROJEYİ AÇ">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Beceri bilgisi</span>
+              <input class="skill__button" type="submit" name="button_discord" value="PROJEYİ AÇ">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/html.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Beceri bilgisi</span>
+              <input class="skill__button" type="submit" name="button_html" value="PROJEYİ AÇ">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/db.webp"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Beceri bilgisi</span>
+              <input class="skill__button" type="submit" name="button_db" value="PROJEYİ AÇ">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href="">GitHub'da aç</a>
+          </div>
+        {% elif button_discord%}  
+          <div class="skills__project project" id="project">
+            <img class="project__img" src="../static/img/Ekran görüntüsü 2024-08-07 214907.png" alt="project" width="500">
+            <a class="project__link" href="">GitHub'da aç</a>
+          </div>
+          {% elif button_html%}
+          <div class="skills__project project" id="project">
+            <img class="project__img" src="../static/img/Ekran görüntüsü 2024-08-07 215308.png" alt="project" width="500">
+            <a class="project__link" href="">GitHub'da aç</a>
+          </div>
+          {% elif button_db%} 
+          <div class="skills__project project" id="project">
+            <img class="project__img" src="../static/img/Ekran görüntüsü 2024-08-07 215557.png" alt="project" width="500">
+            <a class="project__link" href="">GitHub'da aç</a>
+          </div>
+        {% endif %}
+      </section>
+      <!-- Geri bildirim formu -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">GERİ BİLDİRİM</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="E-posta Girin" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Yorum"></textarea>
+          </label>
+          <button class="form__button" type="submit">Gönder</button>
+        </form>
+      </section>
+    </main>
+    <!-- Sosyal medya bağlantıları için bir alt bilgi -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
